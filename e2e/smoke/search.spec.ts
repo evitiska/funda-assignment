@@ -7,14 +7,18 @@ import { ContactPage } from "e2e/pages/ContactPage";
 let homePage: HomePage;
 let searchPage: SearchPage;
 
-test.beforeEach(async ({ page }) => {
-  homePage = new HomePage(page);
-  searchPage = new SearchPage(page);
-  await homePage.goto("/");
-  await homePage.acceptCookies();
-});
+test.describe("Tests for search flow",
+  {
+    tag: '@smoke',
+  }, () => {
 
-test.describe("Tests for search flow", () => {
+  test.beforeEach(async ({ page }) => {
+    homePage = new HomePage(page);
+    searchPage = new SearchPage(page);
+    await homePage.goto("/");
+    await homePage.acceptCookies();
+  });
+
   test("Verify that user can search for an area and see results", async ({
     page,
   }) => {

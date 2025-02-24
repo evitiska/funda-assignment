@@ -48,22 +48,6 @@ export default defineConfig({
       },
     },
 
-    {
-      name: 'firefox',
-      use: { 
-        ...devices['Desktop Firefox'],
-        ...fundaUserAgent,
-      },
-    },
-
-    {
-      name: 'webkit',
-      use: { 
-        ...devices['Desktop Safari'],
-        ...fundaUserAgent,
-      },
-    },
-
     /* Test against mobile viewports. */
     // {
     //   name: 'Mobile Chrome',

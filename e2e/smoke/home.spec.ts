@@ -10,7 +10,9 @@ test.beforeEach(async ({ page }) => {
   await homePage.acceptCookies();
 });
 
-test.describe("Tests for home view", () => {
+test.describe("Tests for home view", {
+  tag: '@smoke',
+}, () => {
   test("Verify that main elements are presented on the page ", async ({
     page,
   }) => {

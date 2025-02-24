@@ -25,7 +25,7 @@ export class HomePage extends BasePage {
         this.mijnHuisLink = page.locator('a[href="https://www.funda.nl/mijn-huis/"]');
         this.loginButton = page.locator('button[type="submit"]', { hasText: "Inloggen" });
         this.favorietenLink = page.locator('a[href="https://www.funda.nl/favorieten"]');
-        this.accountButton = page.locator('button', { hasText: "Account" }).first();
+        this.accountButton = page.locator('button', { hasText: "Account" }).last();
     }
     
     /**
