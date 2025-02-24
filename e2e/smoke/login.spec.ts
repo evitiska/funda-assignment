@@ -22,6 +22,8 @@ test.describe(
     test("Verify that a user can log in", async ({ page }) => {
       await logInPage.enterEmail("invalid_email_because_no_at_sign");
       await expect(logInPage.emailError).toBeVisible();
+      await expect(logInPage.emailError).toHaveText(
+        "Dit e-mailadres is niet geldig.")
       await expect(logInPage.emailField).toHaveAttribute(
         "aria-invalid",
         "true"
