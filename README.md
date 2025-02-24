@@ -26,3 +26,5 @@ The Search test spec contains two tests:
 In order to execute these tests or run the project, one must provide a Secrets file that exports:
 - A user agent to run the test with
 - A valid account for the login flow
+
+In a project of bigger scale, I would probably use dotenv or similar to provide these secrets for different configurations
